@@ -1,0 +1,7 @@
+
+Agenda para clientes marcarem horário .
+Envio de SMS ao faltar tanto tempo para o horário.
+Adicionar colunas na aba serviços, com slides na parte de baixo, 
+com exemplos de cortes de cabelo e barbas e seus nomes. 
+Colocar os combos acima, com as barbas e os cabelos, em destaque
+Colocar vinculo com wpp e agenda do google
