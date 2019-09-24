@@ -104,7 +104,7 @@
     
     li.nohover {
         flex: none;
-        transition: none;
+        /* transition: none; */
         overflow: none;
         transform: none;
         /* box-shadow: none; */
