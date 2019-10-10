@@ -10,239 +10,186 @@
     <!-- Importação da biblioteca jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- Fotorama from CDNJS, 19 KB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
-
 </head>
 
 <body>
-    <div class="columns">
-        <div class="column is-4">
-            <h1 class="subtitle">Valores </h1>
-            <h2>Cabelo:</h2>
-            <p>Corte Maquina - 18,00R$</p>
-            <p>Corte à Tesoura - 20,00R$ </p>
-            <p>Corte Infantil - 15,00R$ </p>
-            <p>Lavagem cabelo - 25,00R$</p>
-            <h2>Barba:</h2>
-            <p>Barba Máquina - 15,00R$ </p>
-            <p>Barba Tesoura - 20,00R$</p>
-            <p>Navalha - 25,00R$</p>
-            <p>Lavagem barba - 20,00R$</p>
-            <h2>Outros:</h2>
-            <p>Corte Cabelo + Barba - 25,00R$ </p>
-            <p>Acabamentos - 15,00R$ </p>
-            <p>Lavagem Cabelo + Barba - 40,00R$</p>
-        </div>
-        <div class="column">
-            <ul class="accordion_principal">
-                <li>
-
-                    <div class="section-title">
-                        <h2>Cabelo</h2>
-                        <div class="section-content">
-                            <p></p>
+    <section class="section" id="Serviços">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="title">Tá dificil</h1>
+                    <h2 class="subtitle">Testando a aba de serviços novamente</h2>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <div class="all">
+                        <img src="./img/Infantil.jfif" alt="">
+                        <div class="text">
+                            <h1 class="title">Cabelo</h1>
+                            <h2 class="subtitle"> Um corte preciso pode fazer toda a diferença em seu estilo.</h2>
+                            <p>20,00 R$</p>
                         </div>
-                </li>
-                <li style="background-image: url(./img/Tesoura.jfif);">
-                    <div class="section-title ">
-                        <h2>Barbas</h2>
                     </div>
-                    <div class="section-content ">
-                        <p></p>
+                    <div class="button">Button</div>
+                </div>
+                <div class="column">
+                    <div class="all" id="flip-toggle">
+                        <div class="flipper">
+                            <div class="front">
+                                <img src="./img/Infantil.jfif" alt="">
+                                <div class="text">
+                                    <h1 class="title">Cabelo</h1>
+                                    <h2 class="subtitle"> Um corte preciso pode fazer toda a diferença em seu estilo.</h2>
+                                    <p>20,00 R$</p>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="text">
+                                    <h1 class="title">Cabelo</h1>
+                                    <h2 class="subtitle"> Um corte preciso pode fazer toda a diferença em seu estilo.</h2>
+                                    <p>20,00 R$</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </li>
-                <li style="background-image: url(./img/Navalha.jfif)">
-                    <div class="section-title">
-                        <h2>Naval</h2>
-                    </div>
-                    <div class="section-content">
-                        <p></p>
-                    </div>
-                </li>
-                <li style="background-image: url(./img/Infantil.jfif) ">
-                    <div class="section-title ">
-                        <h2>Infantil</h2>
-                    </div>
-                    <div class="section-content ">
-                        <p></p>
-                    </div>
-                </li>
-            </ul>
+                    <button class="button" onclick="document.querySelector('#flip-toggle').classList.toggle('Teste1');">Button</button>
+                </div>
             </div>
         </div>
+        </div>
+    </section>
 
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Handlee|Satisfy|Special+Elite&display=swap');
+        .all {
+            perspective: 1000;
+            overflow: hidden;
+            border: 13px solid #000;
+            background-color: rgba(0, 0, 0, 0.7)
+        }
+        
+        .Teste .flipper,
+        .Teste1 .flipper {
+            transform: rotateY(180deg);
+        }
+        
+        .all,
+        .front,
+        .back {
+            width: 100%;
+            height: 700px;
+            transition: all 0.5s;
+        }
+        
+        .front {
+            width: 100%;
+            height: 700px;
+            transition: all 0.5s;
+            overflow: hidden;
+        }
+        /* define a velocidade da transição */
+        
+        .flipper {
+            transition: 0.6s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        /* esconde o verso durante a animação */
+        
+        .front,
+        .back {
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        /* frente posicionada sobre o verso */
+        
+        .front {
+            z-index: 2;
+        }
+        /* verso inicialmente escondido */
+        
+        .back {
+            transform: rotateY(180deg);
+        }
+        /* Edição dos cards */
+        
+        #Serviços {
+            background-color: #111213;
+        }
+        
+        .column {
+            margin: 30px;
+            /* background-color: aqua; */
+        }
+        
+        .title {
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Handlee', cursive;
+            font-size: 2.2em;
+        }
+        
+        .subtitle {
+            color: white;
+            text-align: center;
+            font-family: 'Handlee', cursive;
+            font-size: 2em;
+        }
+        
+        .text {
+            padding: 30px;
+            /* background-color: coral; */
+        }
+        
+        p {
+            margin-top: 10px;
+            text-align: center;
+            color: white;
+            font-size: 1.7em;
+            font-family: 'Handlee', cursive;
+        }
+        
+        img {
+            width: 100%;
+            height: 400px;
+            border-radius: 10px 10px 0px 0px;
+        }
+        
+        .button {
+            font-family: 'Handlee', cursive;
+            width: 100%;
+            padding: 5%;
+            border: 2px solid #000;
+            font-size: 2em;
+            color: white;
+            margin-top: 20px;
+            background-color: black;
+        }
+        
+        .button:hover {
+            color: white;
+        }
+    </style>
+    <script type="text/javascript ">
+        var section = $('li');
 
+        function toggleAccordion() {
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+                $(".accordion_principal > li").removeClass("nohover");
 
-        <style>
-            .tile {
-                width: 100%;
+            } else {
+                section.removeClass('active');
+                $(this).addClass('active');
+                $(".accordion_principal > li").addClass("nohover");
+                $(this).removeClass('nohover');
             }
-            
-            .card {
-                margin: 2%;
-                border: 15px solid #000;
-                transition: all .8s;
-                background-color: #000;
-            }
-            
-            .card:hover {
-                border: 15px solid #fff;
-                transition: all .8s;
-                color: #000;
-            }
-            
-            .card:hover img {
-                transition: all .8s;
-                transform: scale(1.3);
-            }
-            
-            .card h1 {
-                margin-top: 5%;
-                margin-bottom: 5%;
-            }
-            
-            .card:hover h1 {
-                margin-top: 1%;
-                margin-bottom: 0%;
-            }
-            
-            figure {
-                overflow: hidden;
-            }
-            
-            img {
-                transition: all .5s;
-            }
-            
-            .button {
-                border: none;
-                display: none;
-                width: 50%;
-                margin: 0 auto;
-            }
-            
-            .card:hover .button {
-                display: block;
-                background-color: aqua;
-            }
-            
-            p {
-                text-align: center;
-                font-size: 120%;
-                font-family: 'Handlee', cursive;
-            }
-            
-            .subtitle {
-                text-align: center;
-                font-family: 'Special Elite', cursive;
-                font-size: 200%;
-            }
-            
-            h1 {
-                text-align: center;
-                font-weight: bold;
-                font-family: 'Handlee', cursive;
-                font-size: 150%;
-            }
-            /* PRIMEIRA PARTE DA TELA */
-            
-            ul {
-                display: flex;
-                margin-top: 3%;
-                margin-bottom: 3%;
-                padding: 0;
-                overflow: hidden;
-                height: 500px;
-                /* flex-direction: column; */
-            }
-            
-            li {
-                flex: 1;
-                display: flex;
-                align-items: stretch;
-                cursor: pointer;
-                transition: all .8s ease;
-                box-shadow: inset 500em 700em rgba(0, 0, 0, 0.0);
-            }
-            
-            li:hover {
-                flex: 1.5;
-                transition: all .5s;
-                overflow: hidden;
-                box-shadow: inset 500em 700em rgba(0, 0, 0, 0.5);
-            }
-            
-            li.nohover {
-                flex: none;
-                /* transition: none; */
-                overflow: none;
-                transform: none;
-                /* box-shadow: none; */
-            }
-            
-            li.active {
-                flex: 5;
-                cursor: pointer;
-            }
-            
-            li.active:hover {
-                opacity: 1;
-                box-shadow: inset 500em 700em rgba(0, 0, 0, 0.0);
-            }
-            
-            li h2 {
-                margin-left: 0;
-                padding: 0;
-                color: #fff;
-                font-weight: 500;
-                font-size: 30px;
-                transform: rotate(-90deg);
-                white-space: nowrap;
-            }
-            
-            .section-title {
-                display: flex;
-                align-items: center;
-                background-color: rgba(0, 0, 0, 0.7);
-            }
-            
-            li .section-content {
-                margin-left: 40%;
-                flex: 1;
-                opacity: 1;
-                color: rgb(133, 120, 118);
-                right: 0;
-                /* visibility: hidden; */
-            }
-            
-            .section-content {
-                display: flex;
-                text-align: center;
-                align-items: center;
-                margin: 0;
-                padding: 0;
-                opacity: 0;
-                transition: all .25s .1s ease-out;
-            }
-        </style>
-        <script type="text/javascript ">
-            var section = $('li');
-
-            function toggleAccordion() {
-                if ($(this).hasClass('active')) {
-                    $(this).removeClass('active');
-                    $(".accordion_principal > li").removeClass("nohover");
-
-                } else {
-                    section.removeClass('active');
-                    $(this).addClass('active');
-                    $(".accordion_principal > li").addClass("nohover");
-                    $(this).removeClass('nohover');
-                }
-            }
-            section.on('click', toggleAccordion);
-        </script>
+        }
+        section.on('click', toggleAccordion);
+    </script>
 
 </html>
