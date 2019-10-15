@@ -17,24 +17,13 @@
         <div class="container">
             <div class="columns">
                 <div class="column">
-                    <h1 class="title">Tá dificil</h1>
-                    <h2 class="subtitle">Testando a aba de serviços novamente</h2>
+                    <h1 class="title">NOSSOS SERVIÇOS</h1>
+                    <h2 class="subtitle">Visando bem estar e qualidade</h2>
                 </div>
             </div>
             <div class="columns">
                 <div class="column">
-                    <div class="all">
-                        <img src="./img/Infantil.jfif" alt="">
-                        <div class="text">
-                            <h1 class="title">Cabelo</h1>
-                            <h2 class="subtitle"> Um corte preciso pode fazer toda a diferença em seu estilo.</h2>
-                            <p>20,00 R$</p>
-                        </div>
-                    </div>
-                    <div class="button">Button</div>
-                </div>
-                <div class="column">
-                    <div class="all" id="flip-toggle">
+                    <div class="all" id="Cabelo">
                         <div class="flipper">
                             <div class="front">
                                 <img src="./img/Infantil.jfif" alt="">
@@ -46,14 +35,88 @@
                             </div>
                             <div class="back">
                                 <div class="text">
-                                    <h1 class="title">Cabelo</h1>
-                                    <h2 class="subtitle"> Um corte preciso pode fazer toda a diferença em seu estilo.</h2>
-                                    <p>20,00 R$</p>
+                                    <h1 class="title">Alguns estilos para você:</h1>
+                                    <div class="columns">
+                                        <div class="column">
+
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button class="button" onclick="document.querySelector('#flip-toggle').classList.toggle('Teste1');">Button</button>
+                    <button class="button" onclick="document.querySelector('#Cabelo').classList.toggle('Teste1');">Button</button>
+                </div>
+                <div class="column">
+                    <div class="all" id="Barba">
+                        <div class="flipper">
+                            <div class="front">
+                                <img src="./img/Infantil.jfif" alt="">
+                                <div class="text">
+                                    <h1 class="title">Barba</h1>
+                                    <h2 class="subtitle"> Um corte preciso pode fazer toda a diferença em seu estilo.</h2>
+                                    <p>15,00 R$</p>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="text">
+                                    <h1 class="title">Alguns estilos para você:</h1>
+                                    <div class="columns">
+                                        <div class="column">
+                                            <ul>
+                                                <li>
+                                                    <img src="./img/Darwin.png" alt="">
+                                                    <p>Darwin</p>
+                                                </li>
+                                                <li>
+                                                    <img src="./img/FullBeard.png" alt="">
+                                                    <p>FullBeard</p>
+                                                </li>
+                                                <li>
+                                                    <img src="./img/Garibaldi.png" alt="">
+                                                    <p>Garilbaldi</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="column">
+                                            <ul>
+                                                <li>
+                                                    <img src="./img/SideBurns.png" alt="">
+                                                    <p>SideBurns</p>
+                                                </li>
+                                                <li>
+                                                    <img src="./img/ChinCutain.png" alt="">
+                                                    <p>ChinCutain</p>
+                                                </li>
+                                                <li>
+                                                    <img src="./img/A_la_souvard.png" alt="">
+                                                    <p>Souvard</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="column">
+                                            <ul>
+                                                <li>
+                                                    <img src="./img/Old_Dutch.png" alt="">
+                                                    <p>Dutch</p>
+                                                </li>
+                                                <li>
+                                                    <img src="./img/HandleBar.png" alt="">
+                                                    <p>BarMan</p>
+                                                </li>
+                                                <li>
+                                                    <img src="./img/Dali.png" alt="">
+                                                    <p>Dali</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button" onclick="document.querySelector('#Barba').classList.toggle('Teste');">Button</button>
                 </div>
             </div>
         </div>
@@ -62,6 +125,12 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Handlee|Satisfy|Special+Elite&display=swap');
+        .back img {
+            margin-left: 20%;
+            width: 100px;
+            height: 100px;
+        }
+        
         .all {
             perspective: 1000;
             overflow: hidden;
@@ -101,8 +170,6 @@
         .back {
             backface-visibility: hidden;
             position: absolute;
-            top: 0;
-            left: 0;
         }
         /* frente posicionada sobre o verso */
         
@@ -112,6 +179,7 @@
         /* verso inicialmente escondido */
         
         .back {
+            margin-top: 3%;
             transform: rotateY(180deg);
         }
         /* Edição dos cards */
@@ -122,7 +190,7 @@
         
         .column {
             margin: 30px;
-            /* background-color: aqua; */
+            width: 100%;
         }
         
         .title {
@@ -136,7 +204,6 @@
         .subtitle {
             color: white;
             text-align: center;
-            font-family: 'Handlee', cursive;
             font-size: 2em;
         }
         
@@ -171,6 +238,10 @@
         }
         
         .button:hover {
+            color: white;
+        }
+        
+        .button:focus {
             color: white;
         }
     </style>
