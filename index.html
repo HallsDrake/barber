@@ -6,14 +6,13 @@
     <title>FIO DO BIGODE</title>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css'>
     <link rel='stylesheet' href='./css/bulma.min.css'>
+    <!-- importação do arquivo css -->
     <link rel='stylesheet' href='./css/estilo.css'>
     <!-- Importação da biblioteca jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- Fotorama from CDNJS, 19 KB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
-
+    <!-- Vinculando com fontAwesome -->
+    <link href="./icons/css/all.css" rel="stylesheet">
 
     <body>
         <!-- Menu de navegação  -->
@@ -93,60 +92,54 @@
         <section id="Time" class="section">
             <div class="container">
                 <h1 class="title">Nossa equipe</h1>
-                <div class="tile is-ancestor">
-                    <div class="tile is-parent is-12">
-                        <div class="tile is-child">
-                            <div class="card">
-                                <div class="box">
-                                    <div class="card-image">
-                                        <figure class="image is-4by3">
-                                            <img src="">
-                                        </figure>
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="media-contet">
-                                            <p class="title is-4">Alexandre</p>
-                                            <p class="subtitle is-6">SÓCIO FUNDADOR</p>
-                                        </div>
-                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.</p>
-                                    </div>
-                                </div>
+                <div class="columns">
+                    <div class="column">
+                        <div class="card-image">
+                            <figure>
+                                <img src="./img/eu.jpg" alt="">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <h1 class="subtitle">Alexandre Colares</h1>
+                            <h1 class="subtitle">CEO</h1>
+
+                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <div class="icons">
+                                <a href="https://www.instagram.com/gabriel_cestari_colares/"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/HallsDrake"><i class="fab fa-facebook-f"></i></a>
                             </div>
                         </div>
-                        <div class="tile is-child">
-                            <div class="card">
-                                <div class="box">
-                                    <div class="card-image">
-                                        <figure class="image is-4by3">
-                                            <img src="">
-                                        </figure>
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="media-content">
-                                            <p class="title is-4">Adriana</p>
-                                            <p class="subtitle is-6">ADMINISTRADORA</p>
-                                        </div>
-                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.</p>
-                                    </div>
-                                </div>
+                    </div>
+                    <div class="column">
+                        <div class="card-image">
+                            <figure>
+                                <img src="./img/eu.jpg" alt="">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <h1 class="subtitle">Adriana Tessing</h1>
+                            <h1 class="subtitle">Diretora adinistrativa</h1>
+                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <div class="icons">
+                                <a href="https://www.instagram.com/gabriel_cestari_colares/"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/HallsDrake"><i class="fab fa-facebook-f"></i></a>
                             </div>
                         </div>
-                        <div class="tile is-child">
-                            <div class="card">
-                                <div class="box">
-                                    <div class="card-image">
-                                        <figure class="image is-4by3">
-                                            <img src="">
-                                        </figure>
-                                    </div>
-                                    <div class="card-content">
-                                        <div class="media-contet">
-                                            <p class="title is-4">Godo</p>
-                                            <p class="subtitle is-6">SUPORTE TÉCNICO</p>
-                                        </div>
-                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.</p>
-                                    </div>
-                                </div>
+                    </div>
+                    <div class="column">
+                        <div class="card-image">
+                            <figure>
+                                <img src="./img/eu.jpg" alt="">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <h1 class="subtitle">Gabriel Cestari</h1>
+                            <h1 class="subtitle">Gerente de T.I</h1>
+
+                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <div class="icons">
+                                <a href="https://www.instagram.com/gabriel_cestari_colares/"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/HallsDrake"><i class="fab fa-facebook-f"></i></a>
                             </div>
                         </div>
                     </div>
@@ -196,48 +189,7 @@
             </div>
         </section>
         <a id="IconWpp" href="https://api.whatsapp.com/send?l=pt&amp;phone=5551989492383"><img src="https://i.imgur.com/ryESuZ5.png" style="height:50px; position:fixed; bottom: 25px; right: 25px; z-index:99999;" data-selector="img"></a>
-        <script>
-            // Função para que o menu apareça na rolagem
-            var prevScrollpos = window.pageYOffset;
-            window.onscroll = function() {
-                    var currentScrollPos = window.pageYOffset;
-                    if (prevScrollpos > currentScrollPos) {
-                        document.getElementById("navbar").style.top = "0";
-                    } else {
-                        document.getElementById("navbar").style.top = "-100px";
-                    }
-                    prevScrollpos = currentScrollPos;
-                }
-                // Fim da função rolagem
-
-            // Inicio da função deslize suave da página
-            $(function() {
-                $('a').bind('click', function(event) {
-                    var $anchor = $(this);
-                    $('html, body').stop().animate({
-                        scrollTop: $($anchor.attr('href')).offset().top
-                    }, 1000, 'swing');
-                });
-            });
-            // Fim da função deslize
-
-            // Função para o setor serviços
-            var section = $('li');
-
-            function toggleAccordion() {
-                if ($(this).hasClass('active')) {
-                    $(this).removeClass('active');
-                    $(".accordion_principal > li").removeClass("nohover");
-
-                } else {
-                    section.removeClass('active');
-                    $(this).addClass('active');
-                    $(".accordion_principal > li").addClass("nohover");
-                    $(this).removeClass('nohover');
-                }
-            }
-            section.on('click', toggleAccordion);
-        </script>
     </body>
+    <script type="text/javascript" src="js/script.js"></script>
 
 </html>
