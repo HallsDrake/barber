@@ -49,42 +49,95 @@
 
         <!-- Serviços disponíveis em nossa empresa -->
 
-        <section id="Serviços" class="section">
-            <h1 class="title"> Nossos Serviços</h1>
-            <ul class="accordion_principal">
-                <li style="background-image: url(./img/Cabelo2.jfif)">
-                    <div class="section-title">
-                        <h2>Cabelo</h2>
+        <section class="section" id="Serviços">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="title">Nossos Serviços</h1>
+                    <h2 class="subtitle">Visando bem estar e qualidade</h2>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <div class="all" id="Cabelo">
+                        <div class="flipper">
+                            <div class="front">
+                                <img src="./img/Cabelo.jfif" alt="">
+                                <div class="text">
+                                    <h1 class="title">Cabelo</h1>
+                                    <h2 class="subtitle"> Busque a originalidade através do seu corte de cabelo.</br> Seja autêntico.
+                                    </h2>
+                                    <p>R$ 15,00</p>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="text">
+                                    <h1 class="title">#Dica:</h1>
+                                    <div class="columns">
+                                        <div class="column">
+                                            <p> Use o condicionador moderadamente. Apesar de deixar o aspecto dos fios macio, o uso diário do condicionador não é recomendado, e só é sugerido para homens com o cabelo muito seco ou fios compridos,poia a aplicação
+                                                diária pode aumentar a oleosidade.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="section-content">
-                        <p></p>
+                    <button class="button" onclick="document.querySelector('#Cabelo').classList.toggle('Dica');">Dica</button>
+                </div>
+
+                <div class="column">
+                    <div class="all" id="Barba">
+                        <div class="flipper">
+                            <div class="front">
+                                <img src="./img/beard.jpg" alt="">
+                                <div class="text">
+                                    <h1 class="title">Barba</h1>
+                                    <h2 class="subtitle"> A barba é a moldura do rosto. Cuide bem da sua com nosso especialista.</h2>
+                                    <p>R$ 15,00</p>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="text">
+                                    <h1 class="title">#Dica:</h1>
+                                    <div class="columns">
+                                        <div class="column">
+                                            <p> A barba deve ser aparada de acordo com o tamanho que você deseja, no entanto, barbas mais curtas devem ser aparadas em períodos curtos de mais ou menos duas semanas, barbas mais longas, podem ficar sem retoque
+                                                por até um mês.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </li>
-                <li style="background-image: url(./img/Tesoura.jfif);">
-                    <div class="section-title ">
-                        <h2>Barbas</h2>
+                    <button class="button" onclick="document.querySelector('#Barba').classList.toggle('Dica');">Dica</button>
+                </div>
+                <div class="column">
+                    <div class="all" id="Combo">
+                        <div class="flipper">
+                            <div class="front">
+                                <img src="./img/Combo.jpg" alt="">
+                                <div class="text">
+                                    <h1 class="title">Combo</h1>
+                                    <h2 class="subtitle"> Escolha o combo, cabelo + Barba e Ganhe uma cerveja grátis </h2>
+                                    <p>R$ 25,00</p>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="text">
+                                    <h1 class="title">Dica</h1>
+                                    <div class="columns">
+                                        <div class="column">
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                                                it to make a type specimen book</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="section-content ">
-                        <p></p>
-                    </div>
-                </li>
-                <li style="background-image: url(./img/Navalha.jfif)">
-                    <div class="section-title">
-                        <h2>Navalha</h2>
-                    </div>
-                    <div class="section-content">
-                        <p></p>
-                    </div>
-                </li>
-                <li style="background-image: url(./img/Infantil.jfif) ">
-                    <div class="section-title ">
-                        <h2>Infantil</h2>
-                    </div>
-                    <div class="section-content ">
-                        <p></p>
-                    </div>
-                </li>
-            </ul>
+                    <button class="button" onclick="document.querySelector('#Combo').classList.toggle('Dica');">Dica</button>
+                </div>
+            </div>
         </section>
 
         <!-- Nossa equipe -->
@@ -151,33 +204,49 @@
             <div class="container">
                 <div class="columns">
                     <div class="column">
-                        <h1 class='title'>FALE CONOSCO</h1>
+                        <h1 class='title'>Fale Conosco</h1>
                     </div>
                 </div>
                 <div class="columns">
-                    <div class="column is-4">
-                        <h1 class="subtitle">ESMERALDA</h1>
-                        <p>Dr. Rubens Nelson Keller, 446</p>
-                        <p>Esmeralda</p>
-                        <p>Santa Cruz do Sul - RS - Brasil</p>
-                        </br>
-                        <p class="subtitle">(99)9-99999999</p>
-                        <p>De segunda à sábado dàs 10h às 18h</p>
-                    </div>
-                    <div class="column is-4">
-                        <form method='POST'>
-                            <div class='field'>
-                                <h1 class='subtitle'>DEIXE SUA MENSAGEM</h1>
-                                <input class='input' type='text' placeholder='NOME'>
-                                <input class='input' type='email' placeholder='E-MAIL'>
-                                <textarea class='textarea' placeholder="COMENTÁRIOS, CRÍTICAS OU SUGESTÕES AQUI"></textarea>
-                                <input class='button is-fullwidth' type='submit' value='ENVIAR'>
+                    <div class="column">
+                        <div class="tile is-ancestor">
+                            <div class="tile is-parent">
+                                <div class="tile is-child is-3">
+                                    <i class="fas fa-map-marker-alt fa-2x"></i>
+                                    <div class="location">
+                                        <p>Dr. Rubens Nelson Keller, 446</p>
+                                        <p>Esmeralda</p>
+                                        <p>Santa Cruz do Sul - RS - Brasil</p>
+                                    </div>
+                                </div>
+                                <div class="tile is-child is-3">
+                                    <i class="fas fa-envelope fa-2x"></i>
+                                    <div class="email">
+                                        <p>ale.colares@outlook.com</p>
+                                        <p>example@example.com</p>
+                                        <p>gabrielcolares.ti@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="tile is-child is-3">
+                                    <i class="fas fa-mobile-alt fa-2x"></i>
+                                    <div class="phone">
+                                        <p class="subtitle">(99)9-99999999</p>
+                                        <p class="subtitle">(99)9-99999999</p>
+                                    </div>
+                                </div>
+                                <div class="tile is-child is-3">
+                                    <i class="far fa-clock fa-2x"></i>
+                                    <div class="hour">
+                                        <p>De segunda à sábado dàs 8h às 19:30h</p>
+                                    </div>
+                                </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- Sessão onde ficará o mapa geográfico -->
         <section id="Mapa" class="section">
             <div class="container-fluid">
                 <div class="columns">
