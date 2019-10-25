@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>FIO DO BIGODE</title>
+    <!-- importandobiblioteca bulma -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css'>
     <link rel='stylesheet' href='./css/bulma.min.css'>
     <!-- importação do arquivo css -->
@@ -11,14 +12,10 @@
     <!-- Importação da biblioteca jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- Vinculando com fontAwesome -->
+    <!-- Importando icones com fontAwesome -->
     <link href="./icons/css/all.css" rel="stylesheet">
 
     <body>
-        <div onload="loading()">
-            <div id="load">
-            </div>
-        </div>
         <!-- Menu de navegação  -->
         <section id="Menu" class="section">
             <div id="navbar" class="navbar-brand nav">
@@ -37,10 +34,10 @@
 
         <!-- Sobre a nossa equipe -->
 
-        <section id="Sobre" class="section">
+        <section id="Sobre" class="section fadeInLeft">
             <div class="container">
                 <div class="columns">
-                    <div class="column is-two-thirds">
+                    <div class="column is-8">
                         <h1 class="title"> A Fio do Bigode </h1>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
                             specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
@@ -53,93 +50,89 @@
 
         <!-- Serviços disponíveis em nossa empresa -->
 
-        <section class="section" id="Serviços">
-            <div class="columns">
-                <div class="column">
-                    <h1 class="title">Nossos Serviços</h1>
-                    <h2 class="subtitle">Visando bem estar e qualidade</h2>
-                </div>
-            </div>
-            <div class="columns">
-                <div class="column">
-                    <div class="all" id="Cabelo">
-                        <div class="flipper">
-                            <div class="front">
-                                <img src="./img/Cabelo.jfif" alt="">
-                                <div class="text">
-                                    <h1 class="title">Cabelo</h1>
-                                    <h2 class="subtitle"> Busque a originalidade através do seu corte de cabelo.</br> Seja autêntico.
-                                    </h2>
-                                    <p>R$ 15,00</p>
+        <section id="Serviços" class="section">
+            <div class="container">
+                <h1 class="title">Nossos Serviços</h1>
+                <div class="columns">
+                    <div class="column">
+                        <div class="all" id="Cabelo">
+                            <div class="flipper">
+                                <div class="front">
+                                    <img src="./img/Cabelo.jfif">
+                                    <div class="text">
+                                        <h1 class="title">Cabelo</h1>
+                                        <h2 class="subtitle"> Busque a originalidade através do seu corte de cabelo.</br> Seja autêntico.
+                                        </h2>
+                                        <p>R$ 15,00</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="back">
-                                <div class="text">
-                                    <h1 class="title">#Dica:</h1>
-                                    <div class="columns">
-                                        <div class="column">
-                                            <p> Use o condicionador moderadamente. Apesar de deixar o aspecto dos fios macio, o uso diário do condicionador não é recomendado, e só é sugerido para homens com o cabelo muito seco ou fios compridos,poia a aplicação
-                                                diária pode aumentar a oleosidade.</p>
+                                <div class="back">
+                                    <div class="text">
+                                        <h1 class="title">#Dica:</h1>
+                                        <div class="columns">
+                                            <div class="column">
+                                                <p> Use o condicionador moderadamente. Apesar de deixar o aspecto dos fios macio, o uso diário do condicionador não é recomendado, e só é sugerido para homens com o cabelo muito seco ou fios compridos,poia a
+                                                    aplicação diária pode aumentar a oleosidade.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <button class="button" onclick="document.querySelector('#Cabelo').classList.toggle('Dica');">Dica</button>
                     </div>
-                    <button class="button" onclick="document.querySelector('#Cabelo').classList.toggle('Dica');">Dica</button>
-                </div>
-
-                <div class="column">
-                    <div class="all" id="Barba">
-                        <div class="flipper">
-                            <div class="front">
-                                <img src="./img/beard.jpg" alt="">
-                                <div class="text">
-                                    <h1 class="title">Barba</h1>
-                                    <h2 class="subtitle"> A barba é a moldura do rosto. Cuide bem da sua com nosso especialista.</h2>
-                                    <p>R$ 15,00</p>
+                    <div class="column">
+                        <div class="all" id="Barba">
+                            <div class="flipper">
+                                <div class="front">
+                                    <img src="./img/beard.jpg">
+                                    <div class="text">
+                                        <h1 class="title">Barba</h1>
+                                        <h2 class="subtitle"> A barba é a moldura do rosto. Cuide bem da sua com nosso especialista.</h2>
+                                        <p>R$ 15,00</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="back">
-                                <div class="text">
-                                    <h1 class="title">#Dica:</h1>
-                                    <div class="columns">
-                                        <div class="column">
-                                            <p> A barba deve ser aparada de acordo com o tamanho que você deseja, no entanto, barbas mais curtas devem ser aparadas em períodos curtos de mais ou menos duas semanas, barbas mais longas, podem ficar sem retoque
-                                                por até um mês.</p>
+                                <div class="back">
+                                    <div class="text">
+                                        <h1 class="title">#Dica:</h1>
+                                        <div class="columns">
+                                            <div class="column">
+                                                <p> A barba deve ser aparada de acordo com o tamanho que você deseja, no entanto, barbas mais curtas devem ser aparadas em períodos curtos de mais ou menos duas semanas, barbas mais longas, podem ficar sem retoque
+                                                    por até um mês.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <button class="button" onclick="document.querySelector('#Barba').classList.toggle('Dica');">Dica</button>
                     </div>
-                    <button class="button" onclick="document.querySelector('#Barba').classList.toggle('Dica');">Dica</button>
-                </div>
-                <div class="column">
-                    <div class="all" id="Combo">
-                        <div class="flipper">
-                            <div class="front">
-                                <img src="./img/Combo.jpg" alt="">
-                                <div class="text">
-                                    <h1 class="title">Combo</h1>
-                                    <h2 class="subtitle"> Escolha o combo, cabelo + Barba e Ganhe uma cerveja grátis </h2>
-                                    <p>R$ 25,00</p>
+                    <div class="column">
+                        <div class="all" id="Combo">
+                            <div class="flipper">
+                                <div class="front">
+                                    <img src="./img/Combo.jpg">
+                                    <div class="text">
+                                        <h1 class="title">Combo</h1>
+                                        <h2 class="subtitle"> Escolha o combo, cabelo + Barba e Ganhe uma cerveja grátis </h2>
+                                        <p>R$ 25,00</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="back">
-                                <div class="text">
-                                    <h1 class="title">Dica</h1>
-                                    <div class="columns">
-                                        <div class="column">
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-                                                it to make a type specimen book</p>
+                                <div class="back">
+                                    <div class="text">
+                                        <h1 class="title">Dica</h1>
+                                        <div class="columns">
+                                            <div class="column">
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                                                    scrambled it to make a type specimen book</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <button class="button" onclick="document.querySelector('#Combo').classList.toggle('Dica');">Dica</button>
                     </div>
-                    <button class="button" onclick="document.querySelector('#Combo').classList.toggle('Dica');">Dica</button>
                 </div>
             </div>
         </section>
@@ -153,13 +146,12 @@
                     <div class="column">
                         <div class="card-image">
                             <figure>
-                                <img src="./img/eu.jpg" alt="">
+                                <img src="./img/eu.jpg">
                             </figure>
                         </div>
                         <div class="card-content">
                             <h1 class="subtitle">Alexandre Colares</h1>
                             <h1 class="subtitle">CEO</h1>
-
                             <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                             <div class="icons">
                                 <a href="https://www.instagram.com/gabriel_cestari_colares/"><i class="fab fa-instagram"></i></a>
@@ -170,7 +162,7 @@
                     <div class="column">
                         <div class="card-image">
                             <figure>
-                                <img src="./img/eu.jpg" alt="">
+                                <img src="./img/eu.jpg">
                             </figure>
                         </div>
                         <div class="card-content">
@@ -186,7 +178,7 @@
                     <div class="column">
                         <div class="card-image">
                             <figure>
-                                <img src="./img/eu.jpg" alt="">
+                                <img src="./img/eu.jpg">
                             </figure>
                         </div>
                         <div class="card-content">
@@ -203,56 +195,52 @@
                 </div>
             </div>
         </section>
-        <!-- <img class="grounded" src="./img/quadro.png" alt=""> -->
+
+        <!-- Aba de informações e contato -->
+
         <section id='Info' class="section">
             <div class="container">
-                <div class="columns">
-                    <div class="column">
-                        <h1 class='title'>Fale Conosco</h1>
-                    </div>
-                </div>
-                <div class="columns">
-                    <div class="column">
-                        <div class="tile is-ancestor">
-                            <div class="tile is-parent">
-                                <div class="tile is-child is-3">
-                                    <i class="fas fa-map-marker-alt fa-2x"></i>
-                                    <div class="location">
-                                        <p>Dr. Rubens Nelson Keller, 446</p>
-                                        <p>Esmeralda</p>
-                                        <p>Santa Cruz do Sul - RS - Brasil</p>
-                                    </div>
-                                </div>
-                                <div class="tile is-child is-3">
-                                    <i class="fas fa-envelope fa-2x"></i>
-                                    <div class="email">
-                                        <p>ale.colares@outlook.com</p>
-                                        <p>example@example.com</p>
-                                        <p>gabrielcolares.ti@gmail.com</p>
-                                    </div>
-                                </div>
-                                <div class="tile is-child is-3">
-                                    <i class="fas fa-mobile-alt fa-2x"></i>
-                                    <div class="phone">
-                                        <p class="subtitle">(99)9-99999999</p>
-                                        <p class="subtitle">(99)9-99999999</p>
-                                    </div>
-                                </div>
-                                <div class="tile is-child is-3">
-                                    <i class="far fa-clock fa-2x"></i>
-                                    <div class="hour">
-                                        <p>De segunda à sábado<br> dàs 8h às 19:30h</p>
-                                    </div>
-                                </div>
+                <h1 class='title'>Fale Conosco</h1>
+                <div class="tile is-ancestor">
+                    <div class="tile is-parent">
+                        <div class="tile is-child is-3">
+                            <i class="fas fa-map-marker-alt fa-2x"></i>
+                            <div class="location">
+                                <p>Dr. Rubens Nelson Keller, 446</p>
+                                <p>Esmeralda</p>
+                                <p>Santa Cruz do Sul - RS - Brasil</p>
+                            </div>
+                        </div>
+                        <div class="tile is-child is-3">
+                            <i class="fas fa-envelope fa-2x"></i>
+                            <div class="email">
+                                <p>ale.colares@outlook.com</p>
+                                <p>example@example.com</p>
+                                <p>gabrielcolares.ti@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="tile is-child is-3">
+                            <i class="fas fa-mobile-alt fa-2x"></i>
+                            <div class="phone">
+                                <p class="subtitle">(99)9-99999999</p>
+                                <p class="subtitle">(99)9-99999999</p>
+                            </div>
+                        </div>
+                        <div class="tile is-child is-3">
+                            <i class="far fa-clock fa-2x"></i>
+                            <div class="hour">
+                                <p>De segunda à sábado<br> dàs 8h às 19:30h</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Sessão onde ficará o mapa geográfico -->
+
+        <!-- Sessão do mapa geográfico -->
+
         <section id="Mapa" class="section">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="columns">
                     <div class="column is-12">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3463.544258964804!2d-52.41359338572801!3d-29.761900181986032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ca3ce4e277e87%3A0x1202d53b93471e15!2sR.%20Dr.%20Rubens%20Nelson%20Keler%2C%20446%20-%20Esmeralda%2C%20Santa%20Cruz%20do%20Sul%20-%20RS%2C%2096835-545!5e0!3m2!1spt-BR!2sbr!4v1568182213749!5m2!1spt-BR!2sbr"></iframe>

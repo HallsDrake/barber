@@ -1,10 +1,3 @@
-                       // Função de loading da tela
-                       var i = setInterval(function loading() {
-                           clearInterval(i);
-
-                           $('#load').css('display', 'none');
-                       }, 2000);
-
                        // Função para que o menu apareça na rolagem
                        var prevScrollpos = window.pageYOffset;
                        window.onscroll = function() {
@@ -28,20 +21,3 @@
                            });
                        });
                        // Fim da função deslize
-
-                       // Função para o setor serviços
-                       var section = $('li');
-
-                       function toggleAccordion() {
-                           if ($(this).hasClass('active')) {
-                               $(this).removeClass('active');
-                               $(".accordion_principal > li").removeClass("nohover");
-
-                           } else {
-                               section.removeClass('active');
-                               $(this).addClass('active');
-                               $(".accordion_principal > li").addClass("nohover");
-                               $(this).removeClass('nohover');
-                           }
-                       }
-                       section.on('click', toggleAccordion);
