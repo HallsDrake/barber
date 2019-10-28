@@ -77,7 +77,7 @@
     }
     
     #Serviços {
-        background-color: #2a2a2a;
+        background-color: #1a1a1a;
     }
     
     #Serviços .title,
@@ -267,27 +267,31 @@
         height: 350px;
     }
     
-    #load {
-        position: fixed;
-        display: block;
-        z-index: 9999;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+    [data-anime] {
+        opacity: 0;
     }
     
-    @keyframes fadeInLeft {
-        from {
-            opacity: 0;
-            transform: translate3d(-100%, 0, 0);
-        }
-        to {
-            opacity: 1;
-            transform: translate3d(0, 0, 0);
-        }
+    [data-anime="left"] {
+        transform: translate3d(-200px, 0px, 0px);
+        transition: 1.5s;
     }
     
-    .fadeInLeft {
-        animation-name: fadeInLeft;
+    [data-anime="cabelo"] {
+        transform: translate3d(-600px, 0px, 0px);
+        transition: 5s;
+    }
+    
+    [data-anime="barba"] {
+        transform: translate3d(-800px, 0px, 0px);
+        transition: 4.5s;
+    }
+    
+    [data-anime="combo"] {
+        transform: translate3d(-1000px, 0px, 0px);
+        transition: 4s;
+    }
+    
+    [data-anime].animate {
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0px);
     }
