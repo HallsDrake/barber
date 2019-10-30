@@ -18,11 +18,28 @@
                            $('a').bind('click', function(event) {
                                var $anchor = $(this);
                                $('html, body').stop().animate({
-                                   scrollTop: $($anchor.attr('href')).offset().top
+                                   scrollTop: $($anchor.attr('href')).offset().top - 50
                                }, 1000, 'swing');
                            });
                        });
                        // Fim da função deslize
+
+                       // Função de transição das telas
+
+                       const bounce = function(func, wait, immediate) {
+                           let timeout;
+                           return function(...args) {
+                               const context = this;
+                               const later = function() {
+                                   timeout = null;
+                                   if (!immediate) func.apply(context, args);
+                               };
+                               const callNow = immediate && !timeout;
+                               clearTimeout(timeout);
+                               timeout = setTimeout(later, wait);
+                               if (callNow) func.apply(context, args);
+                           };
+                       };
 
                        const target = document.querySelectorAll('[data-anime]');
                        const animationClass = 'animate';

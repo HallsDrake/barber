@@ -13,211 +13,136 @@
 </head>
 
 <body>
-    <section class="section" id="Serviços">
-        <div class="columns">
-            <div class="column">
-                <h1 class="title">NOSSOS SERVIÇOS</h1>
-                <h2 class="subtitle">Visando bem estar e qualidade</h2>
-            </div>
-        </div>
-        <div class="columns">
-            <div class="column">
-                <div class="all" id="Cabelo">
-                    <div class="flipper">
-                        <div class="front">
-                            <img src="./img/Cabelo.jfif" alt="">
-                            <div class="text">
-                                <h1 class="title">Cabelo</h1>
-                                <h2 class="subtitle"> Busque a originalidade através do seu corte de cabelo.</br> Seja autêntico.
-                                </h2>
-                                <p>R$ 15,00</p>
-                            </div>
-                        </div>
-                        <div class="back">
-                            <div class="text">
-                                <h1 class="title">#Dica:</h1>
-                                <div class="columns">
-                                    <div class="column">
-                                        <p> Use o condicionador moderadamente. Apesar de deixar o aspecto dos fios macio, o uso diário do condicionador não é recomendado, e só é sugerido para homens com o cabelo muito seco ou fios compridos,poia a aplicação
-                                            diária pode aumentar a oleosidade.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="button" onclick="document.querySelector('#Cabelo').classList.toggle('Dica');">Dica</button>
-            </div>
+    <section class="section">
+        <!-- <div class="container"> -->
+        <div class="navigation">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="menu">
+                <li>
+                    <a href="#">INÍCIO</a></li>
+                <li>
+                    <a href="#">FIO DO BIGODE</a></li>
+                <li>
+                    <a href="#">SERVIÇOS</a></li>
 
-            <div class="column">
-                <div class="all" id="Barba">
-                    <div class="flipper">
-                        <div class="front">
-                            <img src="./img/beard.jpg" alt="">
-                            <div class="text">
-                                <h1 class="title">Barba</h1>
-                                <h2 class="subtitle"> A barba é a moldura do rosto. Cuide bem da sua com nosso especialista.</h2>
-                                <p>R$ 15,00</p>
-                            </div>
-                        </div>
-                        <div class="back">
-                            <div class="text">
-                                <h1 class="title">#Dica:</h1>
-                                <div class="columns">
-                                    <div class="column">
-                                        <p> A barba deve ser aparada de acordo com o tamanho que você deseja, no entanto, barbas mais curtas devem ser aparadas em períodos curtos de mais ou menos duas semanas, barbas mais longas, podem ficar sem retoque por
-                                            até um mês.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="button" onclick="document.querySelector('#Barba').classList.toggle('Dica');">Dica</button>
-            </div>
-            <div class="column">
-                <div class="all" id="Combo">
-                    <div class="flipper">
-                        <div class="front">
-                            <img src="./img/Combo.jpg" alt="">
-                            <div class="text">
-                                <h1 class="title">Combo</h1>
-                                <h2 class="subtitle"> Escolha o combo, cabelo + Barba e Ganhe uma cerveja grátis </h2>
-                                <p>R$ 25,00</p>
-                            </div>
-                        </div>
-                        <div class="back">
-                            <div class="text">
-                                <h1 class="title">Dica</h1>
-                                <div class="columns">
-                                    <div class="column">
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-                                            it to make a type specimen book</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="button" onclick="document.querySelector('#Combo').classList.toggle('Dica');">Dica</button>
-            </div>
+                <li>
+                    <a href="#">TIME</a></li>
+
+                <li>
+                    <a href="#">CONTATO</a> </li>
+
+            </ul>
+        </div>
         </div>
     </section>
-
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Handlee|Satisfy|Special+Elite&display=swap');
-        .all {
-            perspective: 1000;
-            overflow: hidden;
-            border: 13px solid #000;
-            background-color: rgba(0, 0, 0, 0.7);
-            width: 100%;
-            height: 500px;
-            transition: all 0.5s;
+        section {
+            max-width: 400px;
         }
         
-        .Dica .flipper {
-            transform: rotateY(180deg);
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         
-        .front {
-            width: 100%;
-            height: 700px;
-            transition: all 0.5s;
-            overflow: hidden;
-        }
-        /* define a velocidade da transição */
-        
-        .flipper {
-            transition: 0.6s;
-            transform-style: preserve-3d;
-            position: relative;
-        }
-        /* esconde o verso durante a animação */
-        
-        .front,
-        .back {
-            backface-visibility: hidden;
-            position: absolute;
-        }
-        /* frente posicionada sobre o verso */
-        
-        .front {
-            z-index: 2;
-        }
-        /* verso inicialmente escondido */
-        
-        .back {
-            margin-top: 3%;
-            transform: rotateY(180deg);
-        }
-        /* Edição dos cards */
-        
-        #Serviços {
-            background-color: #111213;
-        }
-        
-        .column {
-            width: 100%;
-        }
-        
-        .title {
-            color: white;
-            text-align: center;
-            font-weight: bold;
-            font-family: 'Handlee', cursive;
-            font-size: 1.6em;
-        }
-        
-        .subtitle {
-            color: white;
-            text-align: center;
-            font-size: 1.2em;
-        }
-        
-        .text {
-            padding: 30px;
-            /* background-color: coral; */
-        }
-        
-        p {
+        .navigation {
+            height: 10px;
             margin-top: 10px;
-            text-align: center;
-            color: white;
-            font-size: 1.4em;
-            font-family: 'Handlee', cursive;
+            margin-right: 10px;
+            top: 0;
+            right: 0;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            padding: 20px;
+            transition: .5s;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, .5);
         }
         
-        img {
-            width: 100%;
-            height: 250px;
-            border-radius: 10px 10px 0px 0px;
+        .menu {
+            margin: 0;
+            padding: 0;
+            width: 0;
+            overflow: hidden;
+            display: flex;
+            transition: .5s;
+            align-items: center;
+            height: 30px;
         }
         
-        .button {
-            font-family: 'Handlee', cursive;
-            width: 100%;
-            padding: 5%;
-            border: 2px solid #000;
-            font-size: 1.4em;
-            color: white;
-            margin-top: 20px;
-            background-color: black;
+        .navigation input:checked~.menu {
+            width: 380px;
         }
         
-        .button:hover {
-            color: white;
+        .menu li {
+            list-style: none;
+            margin: 0 10px;
         }
         
-        .button:focus {
-            border-color: rgba(0, 0, 0, 0);
-            color: white;
+        .menu li a {
+            text-decoration: none;
+            color: #666;
+            text-transform: uppercase;
+            font-size: 0.5em;
+            font-weight: 600;
+            transition: .5s;
         }
         
-        .button:active {
-            border-color: rgba(0, 0, 0, 0);
-            color: white;
+        .menu li a:hover {
+            color: #42a8f9;
+        }
+        
+        .navigation input {
+            width: 28px;
+            cursor: pointer;
+            opacity: 0;
+        }
+        
+        .navigation span {
+            position: absolute;
+            left: 26px;
+            width: 15px;
+            height: 4px;
+            background: #666;
+            pointer-events: none;
+            transition: .5s;
+        }
+        
+        .navigation input:checked~span {
+            background: #f974a1;
+        }
+        
+        .navigation span:nth-child(2) {
+            transform: translateY(-8px);
+        }
+        
+        .navigation input:checked~span:nth-child(2) {
+            transform: translateY(0px)rotate(45deg);
+        }
+        
+        .navigation span:nth-child(3) {
+            transform: translateY(8px);
+        }
+        
+        .navigation input:checked~span:nth-child(3) {
+            transform: translateY(0px)rotate(-45deg);
+        }
+        
+        .navigation input:checked~span:nth-child(4) {
+            transform: translateY(0px)rotate(-45deg);
         }
     </style>
+
+    <script>
+    </script>
+</body>
 
 </html>
