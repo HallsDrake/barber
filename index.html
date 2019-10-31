@@ -19,15 +19,15 @@
         <!-- Menu de navegação  -->
         <section id="Menu" class="section">
             <div id="navbar" class="navbar-brand nav">
-                <a href="#Menu" class="navbar-item">INÍCIO</a>
-                <a href="#Sobre" class="navbar-item">FIO DO BIGODE</a>
-                <a href="#Serviços" class="navbar-item">SERVIÇOS</a>
-                <a href="#Time" class="navbar-item">EQUIPE</a>
-                <a href="#Info" class="navbar-item">FALE CONOSCO</a>
+                <a href="#Menu" class="navbar-item" data-anime="INÍCIO">INÍCIO</a>
+                <a href="#Sobre" class="navbar-item" data-anime="FIO DO BIGODE">FIO DO BIGODE</a>
+                <a href="#Serviços" class="navbar-item" data-anime="SERVIÇOS">SERVIÇOS</a>
+                <a href="#Time" class="navbar-item" data-anime="EQUIPE">EQUIPE</a>
+                <a href="#Info" class="navbar-item" data-anime="FALE CONOSCO">FALE CONOSCO</a>
             </div>
             <header class="hero is-bold">
                 <div class="container">
-                    <img src="./img/LogoName.png" data-anime="top">
+                    <img src="./img/LogoName.png">
                 </div>
             </header>
         </section>
@@ -53,7 +53,7 @@
             <div class="container">
                 <h1 class="title">Nossos Serviços</h1>
                 <div class="columns">
-                    <div class="column" data-anime="cabelo">
+                    <div class="column" data-anime="column-1">
                         <div class="all" id="Cabelo">
                             <div class="flipper">
                                 <div class="front">
@@ -80,7 +80,7 @@
                         </div>
                         <button class="button" onclick="document.querySelector('#Cabelo').classList.toggle('Dica');">Dica</button>
                     </div>
-                    <div class="column" data-anime="barba">
+                    <div class="column" data-anime="column-2">
                         <div class="all" id="Barba">
                             <div class="flipper">
                                 <div class="front">
@@ -106,7 +106,7 @@
                         </div>
                         <button class="button" onclick="document.querySelector('#Barba').classList.toggle('Dica');">Dica</button>
                     </div>
-                    <div class="column" data-anime="combo">
+                    <div class="column" data-anime="column-3">
                         <div class="all" id="Combo">
                             <div class="flipper">
                                 <div class="front">
@@ -143,53 +143,62 @@
                 <h1 class="title">Nossa equipe</h1>
                 <div class="columns">
                     <div class="column">
-                        <div class="card-image">
-                            <figure>
-                                <img src="./img/eu.jpg">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <h1 class="subtitle">Alexandre Colares</h1>
-                            <h1 class="subtitle">CEO</h1>
-                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            <div class="icons">
-                                <a href="https://www.instagram.com/gabriel_cestari_colares/"><i class="fab fa-instagram"></i></a>
-                                <a href="https://www.facebook.com/HallsDrake"><i class="fab fa-facebook-f"></i></a>
+                        <div class="team">
+                            <div class="card-image">
+                                <figure>
+                                    <img src="./img/eu.jpg">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <h1 class="subtitle">Alexandre Colares</h1>
+                                <h1 class="subtitle">CEO</h1>
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <div class="icons">
+                                    <a href="https://www.instagram.com/gabriel_cestari_colares/"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.facebook.com/alexandre.colares.50"><i class="fab fa-facebook-f"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="column">
-                        <div class="card-image">
-                            <figure>
-                                <img src="./img/eu.jpg">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <h1 class="subtitle">Adriana Tessing</h1>
-                            <h1 class="subtitle">Diretora adinistrativa</h1>
-                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            <div class="icons">
-                                <a href="https://www.instagram.com/gabriel_cestari_colares/"><i class="fab fa-instagram"></i></a>
-                                <a href="https://www.facebook.com/HallsDrake"><i class="fab fa-facebook-f"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="card-image">
-                            <figure>
-                                <img src="./img/eu.jpg">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <h1 class="subtitle">Gabriel Cestari</h1>
-                            <h1 class="subtitle">Gerente de T.I</h1>
 
-                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                            <div class="icons">
-                                <a href="https://www.instagram.com/gabriel_cestari_colares/"><i class="fab fa-instagram"></i></a>
-                                <a href="https://www.facebook.com/HallsDrake"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <div class="column">
+                        <div class="team">
+                            <div class="card-image">
+                                <figure>
+                                    <img src="./img/eu.jpg">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <h1 class="subtitle">Adriana Tessing</h1>
+                                <h1 class="subtitle">Diretora adinistrativa</h1>
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <div class="icons">
+                                    <a href="https://www.instagram.com/gabriel_cestari_colares/"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.facebook.com/adriana.tessing"><i class="fab fa-facebook-f"></i></a>
+                                </div>
                             </div>
                         </div>
+
+                    </div>
+                    <div class="column">
+                        <div class="team">
+                            <div class="card-image">
+                                <figure>
+                                    <img src="./img/eu.jpg">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <h1 class="subtitle">Gabriel Cestari</h1>
+                                <h1 class="subtitle">Desenvolvedor front-end</h1>
+
+                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <div class="icons">
+                                    <a href="https://www.instagram.com/gabriel_cestari_colares/"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.facebook.com/HallsDrake"><i class="fab fa-facebook-f"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -247,7 +256,7 @@
                 </div>
             </div>
         </section>
-        <a id="IconWpp" href="https://api.whatsapp.com/send?l=pt&amp;phone=5551989492383"><img src="https://i.imgur.com/ryESuZ5.png" style="height:50px; position:fixed; bottom: 25px; right: 25px; z-index:99999;" data-selector="img"></a>
+        <a id="IconWpp" href="https://api.whatsapp.com/send?phone=5551989492383&text=Ol%C3%A1%20Alexandre%2C%20tudo%20certo%3F%20Vi%20seu%20trabalho%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%2C%20a%20barbearia%20tem%20hor%C3%A1rios%20dispon%C3%ADveis%20hoje%3F"><img src="https://i.imgur.com/ryESuZ5.png" style="height:50px; position:fixed; bottom: 25px; right: 25px; z-index:99999;" data-selector="img"></a>
     </body>
     <script type="text/javascript" src="js/script.js"></script>
 
