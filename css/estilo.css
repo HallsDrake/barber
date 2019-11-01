@@ -32,7 +32,6 @@
     
     .nav {
         width: 100%;
-        transition: 0.5s;
         align-items: center;
         position: fixed;
         background-color: black;
@@ -49,10 +48,14 @@
     
     .navbar-brand a:hover {
         color: #fff !important;
-        transition: 0.5s!important;
     }
     
     .navbar-item {
+        color: #BBBBBB;
+        margin: 0 auto;
+    }
+    
+    .navbar-item:hover {
         color: #BBBBBB;
         margin: 0 auto;
     }
@@ -195,7 +198,7 @@
     }
     
     .team:hover a {
-        transition: 0.8s;
+        transition: 0.3s;
         background-color: rgba(0, 0, 0, 0.2);
     }
     
@@ -211,20 +214,29 @@
         font-size: 1.5em;
     }
     
-    a:link {
+    .team a:link {
         color: #4a4a4a;
         text-decoration: underline;
     }
     
-    a:visited {
+    .team a:visited {
         color: #4a4a4a;
         text-decoration: underline;
     }
     
-    a:hover,
-    a:active,
-    a:focus {
-        color: #000;
+    .team a:hover:first-child,
+    .team a:active,
+    .team a:focus {
+        color: #fff;
+        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        text-decoration: none;
+    }
+    
+    .team a:hover,
+    .team a:active,
+    .team a:focus {
+        color: #fff;
+        background-color: #3b5998 !important;
         text-decoration: none;
     }
     
