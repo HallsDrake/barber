@@ -1,364 +1,428 @@
-    @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Handlee|Satisfy|Special+Elite&display=swap');
-    .title {
-        text-align: center;
-        font-size: 4em;
-        font-family: 'Special Elite', cursive;
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Handlee|Satisfy|Special+Elite&display=swap');
+.title {
+    text-align: center;
+    font-size: 4em;
+    font-family: 'Special Elite', cursive;
+}
+
+.subtitle {
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    font-size: 2em;
+}
+
+p {
+    text-align: justify;
+    font-size: 1.2em;
+    font-family: 'Handlee', cursive;
+}
+
+h2 {
+    font-weight: bold;
+    font-family: 'Handlee', cursive;
+    font-size: 1.5em;
+}
+
+#Menu {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0%;
+}
+
+.navbar {
+    transition: 0.5s;
+    overflow: hidden;
+    width: 100%;
+    align-items: center;
+    background-color: black;
+    top: 0;
+    font-family: 'Special Elite', cursive;
+    font-size: 1.2em;
+    color: #fff;
+    position: fixed;
+}
+
+.navbar a {
+    margin: 0 auto;
+    float: left;
+    display: block;
+    color: #BBBBBB;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #FFF;
+}
+
+.navbar a.active {
+    background-color: #363636;
+    color: white;
+}
+
+.navbar .icon {
+    position: fixed;
+    right: 20px;
+    display: none;
+}
+
+header {
+    background-image: url(../img/Fundo.jpg);
+    height: 500px;
+    position: relative;
+}
+
+header img {
+    width: 75%;
+    margin: 0 10%;
+    position: relative;
+}
+
+@media screen and (max-width: 800px) {
+    .navbar a:not(:first-child) {
+        display: none;
     }
-    
-    .subtitle {
-        text-align: center;
-        font-family: 'Special Elite', cursive;
-        font-size: 2em;
-    }
-    
-    p {
-        text-align: justify;
-        font-size: 1.2em;
-        font-family: 'Handlee', cursive;
-    }
-    
-    h2 {
-        font-weight: bold;
-        font-family: 'Handlee', cursive;
-        font-size: 1.5em;
-    }
-    
-    #Menu {
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding: 0%;
-    }
-    
-    .nav {
-        width: 100%;
-        align-items: center;
+    .navbar a.icon {
+        height: 50px;
         position: fixed;
-        background-color: black;
-        top: 0;
-        font-family: 'Special Elite', cursive;
-        font-size: 1.2em;
-        color: #fff;
+        display: block;
     }
-    
-    .navbar-brand a {
-        color: #bbbbbb !important;
-        text-decoration: none !important;
-    }
-    
-    .navbar-brand a:hover {
-        color: #fff !important;
-    }
-    
-    .navbar-item {
-        color: #BBBBBB;
-        margin: 0 auto;
-    }
-    
-    .navbar-item:hover {
-        color: #BBBBBB;
-        margin: 0 auto;
-    }
-    
-    header {
-        background-image: url(../img/Fundo.jpg);
-        height: 500px;
+    .navbar.responsive {
         position: relative;
     }
-    
+    .navbar.responsive .icon {
+        position: absolute;
+        right: 20px;
+        top: 0;
+    }
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+    [data-anime="INÍCIO"] {
+        transform: translate3d(-200px, 0px, 0px);
+        transition: 1s!important;
+    }
+    header {
+        background-image: url(../img/Fundo.jpg);
+        background-size: 800px;
+        height: 300px;
+    }
     header img {
         width: 75%;
         margin: 0 10%;
         position: relative;
+        top: 30%;
+        left: 1%;
     }
-    /* SLOT COM INFORMAÇÕES SOBRE A BARBEARIA */
-    
-    #Sobre {}
-    
-    .columns {
-        justify-content: center;
-    }
-    /* SLOT COM OS CARDS DOS NOSSOS SERVIÇOS */
-    
-    #Serviços {
-        background-color: #1a1a1a;
-    }
-    
-    #Serviços .title,
-    #Serviços .subtitle {
-        color: #fff;
-    }
-    
-    .all {
-        perspective: 1000;
-        overflow: hidden;
-        border: 13px solid #000;
-        background-color: rgba(0, 0, 0, 0.7);
-        width: 100%;
-        height: 500px;
-        transition: all 0.5s;
-    }
-    
-    .Dica .flipper {
-        transform: rotateY(180deg);
-    }
-    
-    .front {
-        width: 100%;
-        height: 700px;
-        transition: all 0.5s;
-        overflow: hidden;
-        z-index: 2;
-    }
-    /* define a velocidade da transição */
-    
-    .flipper {
-        transition: 0.6s;
-        transform-style: preserve-3d;
-        position: relative;
-    }
-    /* esconde o verso durante a animação */
-    
-    .front,
-    .back {
-        backface-visibility: hidden;
-        position: absolute;
-    }
-    /* frente posicionada sobre o verso */
-    
-    .back {
-        margin-top: 3%;
-        transform: rotateY(180deg);
-    }
-    /* Edição dos cards */
-    
-    .front img {
-        width: 100%;
-        height: 30%;
-        border-radius: 10px 10px 0px 0px;
-    }
-    
-    .text {
-        padding: 30px;
-    }
-    
-    .text .title {
-        color: white;
-        text-align: center;
-        font-weight: bold;
-        font-family: 'Handlee', cursive;
-        font-size: 1.6em;
-    }
-    
-    .text .subtitle {
-        color: white;
-        text-align: center;
+}
+
+
+/* SLOT COM INFORMAÇÕES SOBRE A BARBEARIA */
+
+.columns {
+    justify-content: center;
+}
+
+
+/* SLOT COM OS CARDS DOS NOSSOS SERVIÇOS */
+
+#Serviços {
+    background-color: #1a1a1a;
+}
+
+#Serviços .title,
+#Serviços .subtitle {
+    color: #fff;
+}
+
+.all {
+    perspective: 1000;
+    overflow: hidden;
+    border: 13px solid #000;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 500px;
+    transition: all 0.5s;
+}
+
+.Dica .flipper {
+    transform: rotateY(180deg);
+}
+
+.front {
+    width: 100%;
+    height: 700px;
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: 2;
+}
+
+
+/* define a velocidade da transição */
+
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+
+/* esconde o verso durante a animação */
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+
+/* frente posicionada sobre o verso */
+
+.back {
+    margin-top: 3%;
+    transform: rotateY(180deg);
+}
+
+
+/* Edição dos cards */
+
+.front img {
+    width: 100%;
+    height: 30%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.text {
+    padding: 30px;
+}
+
+.text .title {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Handlee', cursive;
+    font-size: 1.6em;
+}
+
+.text .subtitle {
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.text p {
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    font-size: 1.4em;
+    font-family: 'Handlee', cursive;
+}
+
+.button {
+    font-family: 'Handlee', cursive;
+    width: 100%;
+    padding: 5%;
+    border: 2px solid #000;
+    font-size: 1.4em;
+    color: white;
+    margin-top: 20px;
+    background-color: black;
+}
+
+.button:hover {
+    color: white;
+}
+
+.button:focus {
+    border-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+
+.button:active {
+    border-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+
+
+/* Edição da section TIME */
+
+#Time {
+    background-color: white;
+}
+
+.team:hover {
+    transition: 0.5s;
+    box-shadow: -15px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.team:hover a {
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+figure img {
+    margin-left: 25%;
+    margin-top: 5%;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+.card-content .subtitle {
+    font-size: 1.5em;
+}
+
+.team a:link {
+    color: #4a4a4a;
+    text-decoration: underline;
+}
+
+.team a:visited {
+    color: #4a4a4a;
+    text-decoration: underline;
+}
+
+.team a:hover:first-child,
+.team a:active,
+.team a:focus {
+    color: #fff;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    text-decoration: none;
+}
+
+.team a:hover,
+.team a:active,
+.team a:focus {
+    color: #fff;
+    background-color: #3b5998 !important;
+    text-decoration: none;
+}
+
+.icons {
+    display: block;
+    font-size: 2em;
+}
+
+i {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10%;
+}
+
+
+/* informações para contato */
+
+#Info {
+    background-color: #000;
+}
+
+#Info .subtitle,
+#Info p {
+    color: #fff;
+    text-align: center;
+}
+
+#Info .title {
+    color: #fff;
+}
+
+#Info i {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    margin-bottom: 10%;
+    margin-left: 20%;
+}
+
+@media(max-width: 900px) {
+    .phone p {
+        text-align: justify;
         font-size: 1.2em;
-    }
-    
-    .text p {
-        margin-top: 10px;
-        text-align: center;
-        color: white;
-        font-size: 1.4em;
         font-family: 'Handlee', cursive;
     }
-    
-    .button {
-        font-family: 'Handlee', cursive;
-        width: 100%;
-        padding: 5%;
-        border: 2px solid #000;
-        font-size: 1.4em;
-        color: white;
-        margin-top: 20px;
-        background-color: black;
-    }
-    
-    .button:hover {
-        color: white;
-    }
-    
-    .button:focus {
-        border-color: rgba(0, 0, 0, 0);
-        color: white;
-    }
-    
-    .button:active {
-        border-color: rgba(0, 0, 0, 0);
-        color: white;
-    }
-    /* Edição da section TIME */
-    
-    #Time {
-        background-color: white;
-    }
-    
-    .team:hover {
-        transition: 0.5s;
-        box-shadow: -15px 20px 20px rgba(0, 0, 0, 0.2);
-    }
-    
-    .team:hover a {
-        transition: 0.3s;
-        background-color: rgba(0, 0, 0, 0.2);
-    }
-    
-    figure img {
-        margin-left: 25%;
-        margin-top: 5%;
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-    }
-    
-    .card-content .subtitle {
-        font-size: 1.5em;
-    }
-    
-    .team a:link {
-        color: #4a4a4a;
-        text-decoration: underline;
-    }
-    
-    .team a:visited {
-        color: #4a4a4a;
-        text-decoration: underline;
-    }
-    
-    .team a:hover:first-child,
-    .team a:active,
-    .team a:focus {
-        color: #fff;
-        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-        text-decoration: none;
-    }
-    
-    .team a:hover,
-    .team a:active,
-    .team a:focus {
-        color: #fff;
-        background-color: #3b5998 !important;
-        text-decoration: none;
-    }
-    
-    .icons {
-        font-size: 2em;
-    }
-    
-    i {
-        margin-left: 20%;
-        margin-right: 20%;
-        margin-top: 10%;
-    }
-    
-    #Info {
-        background-color: #000;
-    }
-    
-    #Info .subtitle,
-    #Info p {
-        color: #fff;
-        text-align: center;
-    }
-    
-    #Info .title {
-        color: #fff;
-    }
-    
-    #Info i {
-        display: flex;
-        justify-content: center;
-        color: #fff;
-        margin-bottom: 10%;
-        margin-left: 20%;
-    }
-    
-    @media(max-width: 900px) {
-        .phone p {
-            text-align: justify;
-            font-size: 1.2em;
-            font-family: 'Handlee', cursive;
-        }
-    }
-    
+}
+
+#Mapa {
+    background-color: #000;
+    margin: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+iframe {
+    border-radius: 30px;
+    width: 100%;
+    height: 350px;
+}
+
+@media(max-width: 900px) {
     #Mapa {
-        background-color: #000;
-        margin: 0;
-        padding-left: 50px;
-        padding-right: 50px;
-        padding-top: 20px;
-        padding-bottom: 30px;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        padding-bottom: 20px;
     }
-    
     iframe {
-        border-radius: 30px;
-        width: 100%;
-        height: 350px;
+        border-radius: 0px;
     }
-    
-    @media(max-width: 900px) {
-        #Mapa {
-            padding-left: 0;
-            padding-right: 0;
-            padding-top: 0;
-            padding-bottom: 20px;
-        }
-        iframe {
-            border-radius: 0px;
-        }
-    }
-    
-    [data-anime] {
-        opacity: 0;
-    }
-    
-    [data-anime="left"] {
-        transform: translate3d(-200px, 0px, 0px);
-        transition: 1.5s;
-    }
-    
-    [data-anime="column-1"] {
-        transform: translate3d(-600px, 0px, 0px);
-        transition: 5s;
-    }
-    
-    [data-anime="column-2"] {
-        transform: translate3d(-800px, 0px, 0px);
-        transition: 4.5s;
-    }
-    
-    [data-anime="column-3"] {
-        transform: translate3d(-1000px, 0px, 0px);
-        transition: 4s;
-    }
-    
-    [data-anime="INÍCIO"] {
-        transform: translate3d(-1000px, 0px, 0px);
-        transition: 4s;
-    }
-    
-    [data-anime="FIO DO BIGODE"] {
-        transform: translate3d(-1000px, 0px, 0px);
-        transition: 3.5s;
-    }
-    
-    [data-anime="SERVIÇOS"] {
-        transform: translate3d(-1000px, 0px, 0px);
-        transition: 3s;
-    }
-    
-    [data-anime="EQUIPE"] {
-        transform: translate3d(-1000px, 0px, 0px);
-        transition: 2.5s;
-    }
-    
-    [data-anime="FALE CONOSCO"] {
-        transform: translate3d(-1000px, 0px, 0px);
-        transition: 2s;
-    }
-    
-    [data-anime].animate {
-        opacity: 1;
-        transform: translate3d(0px, 0px, 0px);
-    }
+}
+
+[data-anime] {
+    opacity: 0;
+}
+
+[data-anime="left"] {
+    transform: translate3d(-200px, 0px, 0px);
+    transition: 1.5s;
+}
+
+[data-anime="column-1"] {
+    transform: translate3d(-600px, 0px, 0px);
+    transition: 5s;
+}
+
+[data-anime="column-2"] {
+    transform: translate3d(-800px, 0px, 0px);
+    transition: 4.5s;
+}
+
+[data-anime="column-3"] {
+    transform: translate3d(-1000px, 0px, 0px);
+    transition: 4s;
+}
+
+[data-anime="INÍCIO"] {
+    transform: translate3d(-1000px, 0px, 0px);
+    transition: 4s;
+}
+
+[data-anime="FIO DO BIGODE"] {
+    transform: translate3d(-1000px, 0px, 0px);
+    transition: 3.5s;
+}
+
+[data-anime="SERVIÇOS"] {
+    transform: translate3d(-1000px, 0px, 0px);
+    transition: 3s;
+}
+
+[data-anime="EQUIPE"] {
+    transform: translate3d(-1000px, 0px, 0px);
+    transition: 2.5s;
+}
+
+[data-anime="FALE CONOSCO"] {
+    transform: translate3d(-1000px, 0px, 0px);
+    transition: 2s;
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
