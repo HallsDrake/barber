@@ -31,7 +31,7 @@ h2 {
 }
 
 .navbar {
-    transition: 0.5s;
+    transition: .5s;
     overflow: hidden;
     width: 100%;
     align-items: center;
@@ -409,27 +409,27 @@ iframe {
 
 [data-anime="INÍCIO"] {
     transform: translate3d(-1000px, 0px, 0px);
-    transition: 4s;
+    /* transition: 4s; */
 }
 
 [data-anime="FIO DO BIGODE"] {
     transform: translate3d(-1000px, 0px, 0px);
-    transition: 3.5s;
+    /* transition: 3.5s; */
 }
 
 [data-anime="SERVIÇOS"] {
     transform: translate3d(-1000px, 0px, 0px);
-    transition: 3s;
+    /* transition: 3s; */
 }
 
 [data-anime="EQUIPE"] {
     transform: translate3d(-1000px, 0px, 0px);
-    transition: 2.5s;
+    /* transition: 2.5s; */
 }
 
 [data-anime="FALE CONOSCO"] {
     transform: translate3d(-1000px, 0px, 0px);
-    transition: 2s;
+    /* transition: 2s; */
 }
 
 [data-anime].animate {
