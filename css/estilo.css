@@ -58,8 +58,15 @@ h2 {
 }
 
 .navbar a.active {
-    background-color: #363636;
+    transition: .5s;
+    background-color: #2b2b2b;
     color: white;
+}
+
+.navbar a.active:hover {
+    transition: .5s;
+    background-color: #fff;
+    color: #000;
 }
 
 .navbar .icon {
@@ -128,7 +135,7 @@ header img {
 }
 
 
-/* SLOT COM OS CARDS DOS NOSSOS SERVIÇOS */
+/* SLOT COM OS CARDS DOS SERVIÇOS */
 
 #Serviços {
     background-color: #1a1a1a;
@@ -254,9 +261,15 @@ header img {
     background-color: white;
 }
 
+.team {
+    transition: 0.5s;
+    border-radius: 20px;
+}
+
 .team:hover {
     transition: 0.5s;
-    box-shadow: -15px 20px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: -25px 20px 30px rgba(0, 0, 0, 0.2);
+    transform: translate(-20px);
 }
 
 .team:hover a {
@@ -279,6 +292,18 @@ figure img {
 
 .card-content .subtitle {
     font-size: 1.5em;
+}
+
+.team a {
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 35%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important;
+    border-radius: 50px;
 }
 
 .team a:link {
@@ -305,17 +330,6 @@ figure img {
     color: #fff;
     background-color: #3b5998 !important;
     text-decoration: none;
-}
-
-.team a {
-    margin-left: 5%;
-    margin-top: 5%;
-    width: 35%;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none !important;
 }
 
 .icons {
@@ -348,11 +362,15 @@ figure img {
     margin-bottom: 10%;
 }
 
+@media(max-width: 1300px) {
+    .phone p {
+        font-size: 1.5em;
+    }
+}
+
 @media(max-width: 900px) {
     .phone p {
-        text-align: justify;
         font-size: 1.2em;
-        font-family: 'Handlee', cursive;
     }
 }
 
@@ -405,31 +423,6 @@ iframe {
 [data-anime="column-3"] {
     transform: translate3d(-1000px, 0px, 0px);
     transition: 4s;
-}
-
-[data-anime="INÍCIO"] {
-    transform: translate3d(-1000px, 0px, 0px);
-    /* transition: 4s; */
-}
-
-[data-anime="FIO DO BIGODE"] {
-    transform: translate3d(-1000px, 0px, 0px);
-    /* transition: 3.5s; */
-}
-
-[data-anime="SERVIÇOS"] {
-    transform: translate3d(-1000px, 0px, 0px);
-    /* transition: 3s; */
-}
-
-[data-anime="EQUIPE"] {
-    transform: translate3d(-1000px, 0px, 0px);
-    /* transition: 2.5s; */
-}
-
-[data-anime="FALE CONOSCO"] {
-    transform: translate3d(-1000px, 0px, 0px);
-    /* transition: 2s; */
 }
 
 [data-anime].animate {
